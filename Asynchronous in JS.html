@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Tahoma;
+      }
+
+      body {
+          background: linear-gradient(
+              to right,
+              #091212,
+              #f0ebbd
+          );
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90vh;
+          color: #f0ebbd;
+      }
+
+      div {
+          background-color: #091212;
+          padding: 40px;
+          border-radius: 20px;
+          text-align: center;
+          box-shadow: 0 10px 30px black;
+      }
+
+      h1 {
+          font-size: 30px;
+          margin-top: 20px;
+          color
+      }
+
+      #result {
+          font-size: 2.5em;
+          margin-top: 20px;
+          color: ;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Javascript ASYNC/AWAIT → ACP</h1>
+      <h1>Multiplication of 2 Numbers</h1>
+      <h2 id="result"></h2>
+    </div>
+
+    <script>
+      async function mult(a, b) {
+        const result = (await a) * b;
+        display(result);
+      }
+
+      function display(product) {
+        document.getElementById("result").innerHTML = product;
+      }
+
+      mult(10, 15);
+    </script>
+  </body>
+</html>
